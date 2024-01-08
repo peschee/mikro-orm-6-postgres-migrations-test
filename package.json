@@ -1,0 +1,38 @@
+{
+  "name": "mikro-orm-6-postgres-migrations-test",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "63866+peschee@users.noreply.github.com",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm run clean && tsc",
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@mikro-orm/core": "^6.0.1",
+    "@mikro-orm/migrations": "^6.0.1",
+    "@mikro-orm/postgresql": "^6.0.1",
+    "@mikro-orm/reflection": "^6.0.1"
+  },
+  "devDependencies": {
+    "@mikro-orm/cli": "^6.0.1",
+    "@tsconfig/node20": "^20.1.2",
+    "@tsconfig/strictest": "^2.0.2",
+    "@types/node": "^20.10.6",
+    "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
+    "ts-node": "TypeStrong/ts-node#ddb05ef",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [],
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/server/mikro-orm.config.ts",
+      "./dist/server/mikro-orm.config.js"
+    ]
+  }
+}
